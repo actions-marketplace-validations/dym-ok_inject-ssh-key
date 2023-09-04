@@ -20,3 +20,7 @@ runs:
         host='${{ inputs.host-name }}'
         hosts="$(dig +short "$host" | grep -v '\.$' | sed -z 's|\n|,|g')$host"
         ssh-keyscan -H "$hosts" > ~/.ssh/known_hosts
+
+branding:
+  icon: 'log-in'
+  color: 'purple'
